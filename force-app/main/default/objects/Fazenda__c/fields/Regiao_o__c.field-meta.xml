@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regiao_o__c</fullName>
+    <externalId>false</externalId>
+    <label>Região</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sul de Minas</fullName>
+                <default>false</default>
+                <label>Sul de Minas</label>
+            </value>
+            <value>
+                <fullName>Cerrado Mineiro</fullName>
+                <default>false</default>
+                <label>Cerrado Mineiro</label>
+            </value>
+            <value>
+                <fullName>Mantiqueira de Minas</fullName>
+                <default>false</default>
+                <label>Mantiqueira de Minas</label>
+            </value>
+            <value>
+                <fullName>Chapada de Minas</fullName>
+                <default>false</default>
+                <label>Chapada de Minas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
