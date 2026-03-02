@@ -1,3 +1,27 @@
 <template>
-    
+    <lightning-card title="CoffeeTrack - Lotes para Exportação" icon-name="custom:custom64">
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-gutters slds-m-bottom_medium">
+                <div class="slds-col">
+                    <lightning-input type="number" label="Nota SCA Mínima" onchange={handleNotaChange}></lightning-input>
+                </div>
+            </div>
+
+            <div class="slds-grid slds-wrap">
+                <template if:true={lotes}>
+                    <template for:each={lotes} for:item="lote">
+                        <div key={lote.Id} class="slds-col slds-size_1-of-3 slds-p-around_small">
+                            <div class="slds-box slds-theme_default">
+                                <h3 class="slds-text-heading_small">{lote.Name}</h3>
+                                <p>Fazenda: {lote.Fazenda__r.Name}</p>
+                                <p>Região: {lote.Fazenda__r.Regiao__c}</p>
+                                <p><b>Nota SCA: {lote.Nota_SCA__c}</b></p>
+                                <lightning-button label="Ver Cotação USD" onclick={handleCotacao} class="slds-m-top_small"></lightning-button>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
 </template>
